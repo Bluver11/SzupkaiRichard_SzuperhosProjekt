@@ -6,7 +6,37 @@ using System.Threading.Tasks;
 
 namespace SzuperhosProjekt
 {
-    internal class Batman
+    public class Batman
     {
+        private double lelemenyesseg;
+
+        public Batman()
+        {
+            this.lelemenyesseg = 100;
+        }
+
+        public void KutyutKeszit()
+        {
+            this.lelemenyesseg += 50;
+        }
+
+        public bool LegyoziE(ISzuperhos szuperhos)
+        {
+            if (szuperhos.MekkoraAzEreje() < this.lelemenyesseg)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        public double MekkoraAzEreje()
+        {
+            return this.lelemenyesseg * 2;
+        }
+
+        public override string ToString()
+        {
+            return $"Batman: leleményesség: {lelemenyesseg}";
+        }
     }
 }
