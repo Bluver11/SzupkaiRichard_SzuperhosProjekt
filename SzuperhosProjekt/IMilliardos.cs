@@ -8,5 +8,6 @@ namespace SzuperhosProjekt
 {
     internal interface IMilliardos
     {
+        void KutyutKeszit();
     }
 }
